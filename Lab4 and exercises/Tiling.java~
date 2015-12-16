@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Result {
+    // declare the member field
+
+    // declare the constructor
+
+	// implement other necessary methods
+
+	/* solve: to count how many ways to tile a rectangle with size 3 x N
+	 * 		PRE-condition:
+	 *		POST-condition:
+	 */
+	public int solve(int N) {
+		// implementation
+		return -1;
+	}
+}
+
+class Tiling {
+
+	public static void main(String[] args) {
+		// declare the necessary variables
+
+		// create new object from class Result
+
+		// declare a Scanner object to read input
+
+		// read input and process them accordingly
+	}
+}

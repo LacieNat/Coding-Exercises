@@ -1,0 +1,27 @@
+class Inversions{
+  public static int countInversions(ArrayList<Integer> intArray){
+    int count = 0;
+    for(int i=0; i<intArray.size()-1; i++){
+      for(int j=i+1; j<intArray.size(); j++){
+        if(intArray.get(i)>intArray.get(j)){
+          count++;
+        }
+      }
+    }
+  }
+  
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    ArrayList<Integer> array = new ArrayList<Integer>();
+    int size = sc.nextInt();
+    for(int i=0; i<size; i++){
+      array.add(sc.nextInt());
+    }
+    
+    System.out.println(countInversions(array));
+  }
+}
+      
+          
+    

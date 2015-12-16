@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+
+public class Exp {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    File file = new File(args);
+    FileWriter filewrt = new FileWriter(file);
+    FileReader filerd = new FileReader(file);
+    
+    filewrt.write("hello");
+    
+    System.out.println(filerd.read());
+    
+  }
+}
+    
+    

@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Block {
+  public Block() {
+  }
+  
+  public Block(int noOfBlock) {
+    this.noOfBlock = noOfBlock;
+  }
+}
+
+class TestBlock {
+  public static void main (String[] args){
+    Scanner sc = new Scanner(System.in);
+    blocks = sc.nextInt();
+  }
+}

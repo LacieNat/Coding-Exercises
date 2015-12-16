@@ -1,0 +1,19 @@
+class Array{
+public static void enlargeArray( int[] iA,
+int extraCapacity )
+{
+int[] temp;
+temp = new int[ iA.length + extraCapacity];
+for (int k = 0; k < iA.length; k++) {
+temp[k] = iA[k];
+}
+iA = temp;
+}
+
+public static void main(String[] args){
+  int[] intArray = { 1, 2, 3, 4, 5 };
+  enlargeArray( intArray, 5 );
+  
+  System.out.println("arraylength = " + intArray.length);
+}
+}

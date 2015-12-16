@@ -1,0 +1,28 @@
+import java.util.*;
+class WashersV2{
+  public static double circleArea(double diameter){
+    double area = Math.pow(diameter,2)/4*Math.PI;
+    return area;
+  }
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Inner diameter in cm: ");
+    double inDiam = sc.nextDouble();
+    System.out.print("Outer diameter in cm: ");
+    double outDiam = sc.nextDouble();
+    System.out.print("Thickness in cm: ");
+    double thickness = sc.nextDouble();
+    System.out.print("Density in grams per cubic cm: ");
+    double density = sc.nextDouble();
+    System.out.print("Quantity: ");
+    int quantity = sc.nextInt();
+    
+    //compute weight of a single washer
+    double weight = (circleArea(outDiam)-circleArea(inDiam))*thickness*density;
+    
+    //compute weight of n washers
+    double totalWeight = weight*quantity;
+    
+    System.out.printf("Total weight of %d washers is %.2f grams.\n", quantity, totalWeight);
+  }
+}

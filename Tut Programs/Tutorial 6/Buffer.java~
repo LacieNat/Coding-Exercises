@@ -1,0 +1,74 @@
+import java.util.*;
+
+//Question 5
+
+class Buffer {
+	private int size;
+	// Fill in other necessary data members here
+
+	public Buffer() {
+		size = 0;
+	}
+
+	public void setSize(int size) {
+		// Write your code here
+	}
+
+
+	// Method to load data into the buffer
+	public void loadBuffer(String input) {
+		// Write your code here
+	}
+
+	// This method is supposed to clear from buffer the data element which 
+	// was there the earliest and output that element to the user
+	public void retrieveFromBuffer() {
+		// Write your code here
+	}
+
+	// This method must display contents of the buffer to the user before
+	// emptying it
+	public void clearBuffer() {
+		// Write your code here
+	}
+
+}
+
+class Driver {
+	public static void main(String[] args) {
+
+		Buffer buffer = new Buffer();
+
+		String command;
+		String[] input;
+		int size;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter buffer size : ");
+		size = sc.nextInt();
+		command = sc.nextLine();       // advance scanner past the current line after fetching the integer value
+		buffer.setSize(size);
+
+		System.out.print("Please enter a command (“load <string>”, “retrieve”, “clear”, or “exit”) : ");
+		command = sc.nextLine();
+
+		while (!command.equals("exit")) {
+
+			input = command.split(" ");
+			if (input[0].equals("load")) {
+				buffer.loadBuffer(command.substring(5));
+			}
+			else if (input[0].equals("retrieve")) {
+				buffer.retrieveFromBuffer();
+			}
+			else if (input[0].equals("clear")){
+				buffer.clearBuffer();
+			}
+			else {
+				System.out.println("Enter a valid command!");
+			}
+			System.out.print("Please enter a command (“load <string>”, “retrieve”, “clear”, or “exit”) : ");	
+			command = sc.nextLine();
+		}
+	}
+}

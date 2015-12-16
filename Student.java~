@@ -1,0 +1,14 @@
+class Student {
+  private String studentName;
+  
+  public Student(String name) {
+    studentName = name;
+  }
+}
+
+class Tutorial P
+  private Student[] studentList;
+  private int[] grade;
+  
+  public Tutorial(String[] students){
+    studentList = new Student

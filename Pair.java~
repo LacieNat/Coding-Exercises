@@ -1,0 +1,15 @@
+class Pair <S,T> {
+  
+  private S _first;
+  private T _second;
+  
+  public Pair(S a, T b){
+    _first = a;
+    _second = b;
+  }
+  
+  public S getFirst() { return _first; }
+  public T getSecond() { return _second; }
+}
+
+class TestMoreGenericPair {

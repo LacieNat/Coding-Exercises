@@ -1,0 +1,43 @@
+class BankAcct {
+  private int _acctNum;
+  private double _balance;
+  
+  public BankAcct(){
+    
+  }
+  
+  public BankAcct(int aNum, double bal){
+    _acctNum = aNum;
+    _balance = bal;
+  }
+  
+  public boolean withdraw(double amount){
+    if (_balance<amount)
+      return false;
+    _balance -= amount;
+    return true;
+  }
+  
+  public void deposit(double amount){
+    if (amount<=0)
+      return;
+    _balance += amount;
+  }
+  
+  public void print() {
+    System.out.println("Account Number: " +_acctNum);
+    System.out.printf("Balance: $%.2f\n", _balance);
+  }
+}
+
+class TestBankAcct {
+  public static void main(String[] args) {
+    BankAcct ba1 = new BankAcct();
+    BankAcct ba2;
+    
+    ba2 = ba1;
+    ba1.deposit(1000);
+    
+    ba2.print();
+  }
+}

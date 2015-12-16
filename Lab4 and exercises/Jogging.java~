@@ -1,0 +1,37 @@
+/**
+ *
+ * author	: []
+ * matric no: []
+ * 
+ */
+import java.util.*;
+
+class Result {
+    // declare the member field
+
+    // declare the constructor
+
+	// implement other necessary methods
+
+	/* solve: to determine how far can John run from PGP
+	 * 		PRE-condition:
+	 *		POST-condition:
+	 */
+	public int solve(String[] data) {
+		// implementation
+		return -1;
+	}
+}
+
+class Jogging {
+
+	public static void main(String[] args) {
+		// declare the necessary variables
+
+		// create new object from class Result
+
+		// declare a Scanner object to read input
+
+		// read input and process them accordingly
+	}
+}

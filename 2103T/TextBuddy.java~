@@ -1,0 +1,106 @@
+import java.util.*;
+import java.io.*;
+
+public class TextBuddy {
+  public static void main (String[] args){
+    String filename = args[0];
+    File file = new File(filename);
+    Scanner sc = new Scanner(System.in);
+    ArrayList<String> arr = new ArrayList<String>();
+    
+    System.out.println("Welcome to TextBuddy. " + filename + " is ready for use");
+    System.out.println("command: ");
+    String cmd = sc.next();
+    String input;
+    String removed;
+    int num;
+    
+    while(!cmd.equals("exit")){
+      if (cmd.equals("add")){
+        input = sc.nextLine();
+        input = input.trim();
+        arr.add(input);
+        add(arr, file);
+        System.out.println("added to " + filename + ": \"" + input + "\""); 
+      }
+      
+      else if(cmd.equals("display")){
+        display(filename, file);
+      }
+      
+      else if(cmd.equals("delete")){
+        num = sc.nextInt();
+        removed = delete(arr, num, file);
+        System.out.println("deleted from " + filename + ": \"" + removed + "\"");
+      }
+      
+      else if(cmd.equals("clear")){
+        clear(file);
+        System.out.println("all content deleted from " + filename); 
+      }
+      
+      cmd = sc.next();
+    }
+    
+  }
+  
+  public static void add(ArrayList<String>arr, File file){
+    try {
+      FileWriter filewriter = new FileWriter(file.getAbsoluteFile());
+      BufferedWriter bw = new BufferedWriter(filewriter);
+      for(String e: arr){
+        bw.write(e);
+        bw.newLine();
+      }
+      bw.close();
+    }
+    
+    catch (IOException e){
+      e.printStackTrace();
+    }
+  }
+  
+  public static void display(String filename, File file){
+    try {
+      FileReader filereader = new FileReader(filename);
+      BufferedReader br = new BufferedReader(filereader);
+      String current;
+      int counter = 1;
+      
+      while((current = br.readLine()) != null){
+        System.out.println(counter + ". " + current);
+        counter++;
+      }
+      
+      if(file.length()==0)
+        System.out.println(filename + " is empty");
+    }
+    
+    catch (IOException e){
+      e.printStackTrace();
+    }
+  }
+  
+  public static void clear(File file){
+    try {
+      BufferedWriter bw = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
+      bw.write("");
+      bw.close();
+    }
+    
+    catch (IOException e){
+      e.printStackTrace();
+    }
+  }
+  
+  public static String delete(ArrayList<String>arr, int num, File file){
+    String str = arr.get(num-1);
+    arr.remove(num-1);
+    add(arr, file);
+    return str;
+  }
+}
+    
+    
+    
+  

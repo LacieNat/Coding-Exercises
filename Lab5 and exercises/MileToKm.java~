@@ -1,0 +1,17 @@
+class MileToKm {
+  public static convert(int mile){
+    int km = 1.609*mile;
+    return km
+  }
+  
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Enter distance in miles: ");
+    int mile = sc.nextInt();
+    
+    System.out.printf("That equals %.2f km.", mile);
+    System.out.println();
+  }
+}
+     

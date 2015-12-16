@@ -1,0 +1,26 @@
+import java.util.*;
+
+class QueueExercise {
+	public static void main(String [] args) throws NoSuchElementException {
+
+		QueueLL <Integer> queue = new QueueLL <Integer> ();
+		Scanner sc = new Scanner(System.in);
+		String op;
+
+		while (sc.hasNext()) {
+			op = sc.next();
+
+			if (op.equals("Add")) {
+				// fill in your code here
+
+			}
+
+			else if (op.equals("Query")) {
+				// fill in your code here
+
+			}
+		}
+	}
+
+}
+

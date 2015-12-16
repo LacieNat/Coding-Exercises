@@ -1,0 +1,42 @@
+// CS1020 (AY2012/3 Semester 2)
+// Name: 
+// Matric. No.: 
+// Lab group: 
+// (Write the program description below)
+
+import java.util.*;
+
+class AreaOfTriangle {
+ // Remember to add a description before the header of each such method.
+
+ public static double area(double a, double b, double c){
+   double area, p;
+   p=(a+b+c)/2;
+   area = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+   return area;
+ }
+ 
+ public static int validTriangle(double a, double b, double c){
+   if(area(a,b,c)<=0))
+     return 0;
+   else
+     return 1;
+     
+   
+ 
+ public static void main(String[] args) {
+  double a, b, c;  // lengths of sides of triangle
+  double _area;
+  Scanner sc = new Scanner(System.in);
+
+  System.out.print("Enter 3 lengths: ");
+  
+  a = sc.nextDouble();
+  b = sc.nextDouble();
+  c = sc.nextDouble();
+
+  System.out.printf("Area = %.2f\n", area(a,b,c));
+
+ }
+}
+

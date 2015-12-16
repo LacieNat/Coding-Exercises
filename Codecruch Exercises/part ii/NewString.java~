@@ -1,0 +1,7 @@
+class NewString{
+  public static void main(String[] args){
+    String string = "  Hi I am Lacie ";
+    string.trim();
+    System.out.println(string);
+  }
+}

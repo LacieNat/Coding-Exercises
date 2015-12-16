@@ -1,0 +1,12 @@
+class iterator{
+  public static void main(String[] args){
+    List listArray = new ArrayList();
+    listArray.add("Germany");
+    listArray.add("Holland");
+    listArray.add("Sweden");
+    
+    ListIterator lt = listArray.listIterator();
+    while(lt.hasNext())
+      System.out.println(lt.next());
+  }
+}

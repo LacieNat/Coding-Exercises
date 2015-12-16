@@ -1,0 +1,19 @@
+import java.util.*;
+
+class TallTree {
+	public static void main(String argv[]) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();		
+		sc.nextLine();
+		
+		ArrayList<Integer> treeHeight = new ArrayList<Integer>();
+		
+		}
+	}
+	
+	//get max size of an increasing subsequence, starting from startIndex
+	public static int getMaxSubsequence(ArrayList<Integer> list, int startIndex) {
+		
+		return 123;
+	}
+}

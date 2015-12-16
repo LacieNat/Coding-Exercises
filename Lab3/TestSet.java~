@@ -1,0 +1,70 @@
+public interface ISet {
+  public boolean add(String name) throws IndexOutOfBoundsException;
+  public Iset intersection(ISet otherSet);
+  public int size();
+  public String[] getNames();
+}
+
+class FriendSet implements ISet {
+  private String[] names;
+  private int counter;
+  
+  public FriendSet(){
+  }
+  
+  public FriendSet(FriendSet set){
+    this.names = set.getNames();
+    counter = 0;
+  }
+  
+  public int getCounter(){
+    return counter;
+  }
+  
+  public String[] getNames(){
+    return names;
+  }
+  
+  public boolean add(String name) throws IndexOutOfBoundsException {
+    if(names.length > 100){
+      IndexOutOfBoundsException expObj = 
+        new IndexOutOfBoundsException("Maximum friends exceeded");
+      throw expObj;
+    }
+    
+    for(String element: names){
+      if(name.equals(element))
+        return false;
+    }
+    
+    if((name.trim()).equals(""))
+      return false;
+    
+    names[counter] = name;
+    counter++;
+    return true;
+  }
+  
+  public Iset intersection(Iset otherSet){
+    newSet = new FriendSet();
+    for(String element: otherSet.getNames()){
+      for(String name: names){
+        if(element.equals(name))
+          newSet.add(element);
+      }
+    }
+    return newSet;
+  }
+  
+  public int size(){
+    int count;
+    for(String element: names)
+      count++;
+    return count;
+  }
+}
+      
+    
+    
+    
+    
